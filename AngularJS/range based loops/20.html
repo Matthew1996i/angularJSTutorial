@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJs | Range based Loops</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="controller5.js"></script>
+</head>
+<body ng-app="mainApp">
+  <div ng-controller="app">
+    <li ng-repeat="i in range track by $index">
+      {{$index}} <br>
+    </li>
+  </div>
+</body>
+</html>
