@@ -1,0 +1,36 @@
+[
+  {
+    "records": [
+      {
+        "name": "Mehul",
+        "age": 18,
+        "favColor": "orange"
+      },
+      {
+        "name": "Jai",
+        "age": 18,
+        "favColor": "black"
+      },
+      {
+        "name": "Alex",
+        "age": 27,
+        "favColor": "cian"
+      },
+      {
+        "name": "Carl",
+        "age": 19,
+        "favColor": "red"
+      },
+      {
+        "name": "Judit",
+        "age": 38,
+        "favColor": "red"
+      },
+      {
+        "name": "Max",
+        "age": 10,
+        "favColor": "red"
+      }
+    ]
+  }
+]

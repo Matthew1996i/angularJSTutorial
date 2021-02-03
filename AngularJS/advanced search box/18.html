@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJs | Creating Advanced Box</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="controller5.js"></script>
+</head>
+<body ng-app="mainApp5">
+
+  <div id="searchBoxes">
+    Global search filter: <input type="text" ng-model="globalSearch.$"><br/>
+    Name search filter: <input type="text" ng-model="globalSearch.name"><br/>
+    Age search filter: <input type="text" ng-model="globalSearch.age"><br/>
+    Fav Color search filter: <input type="text" ng-model="globalSearch.favColor">
+  </div>
+
+  <div ng-controller="people">
+    <ul>
+      <h2>Names and ages of programmers in te local area: </h2>
+    
+      <li ng-repeat="person in persons | filter: globalSearch">
+        <b>{{ "Name: " + person.name}}</b></br>
+        {{'Age:' + person.age + ' Fav Color:' + person.favColor}}</br>
+        <br/>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
