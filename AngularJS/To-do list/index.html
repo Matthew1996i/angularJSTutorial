@@ -14,10 +14,10 @@
 
   <div id="tasksToShow">
     <ul>
-      <li ng-repeat="task in tasks track by $index">
+      <li class="listTask" ng-repeat="task in tasks track by $index">
         <input type="checkbox" ng-model="task.status">
         <span ng-keydown="contentEdit()" contenteditable="false" ng-dblclick="contentEdit()" ng-model="task.task" class="{{task.status}}">
-          Tarefa: {{task.task}}
+          {{task.task}}
         </span>
       </li>
     </ul>

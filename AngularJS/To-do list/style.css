@@ -4,19 +4,38 @@
   padding: 5px;
   font-size: 12pt;
   width: 300px;
+  border: 1px solid rgb(182, 182, 182);
 }
 
 .titleTask {
   text-align: center;
 }
 
+.listTask {
+  list-style: none;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.listTask > span {
+  display: block;
+  padding: 10px;
+  margin-left: 10px;
+  width: 50%;
+}
+
 .false {
-  background-color: rgb(247, 147, 147);
+  color: #fff;
+  background-color: rgb(179, 82, 82);
+  font-weight: bold;
 }
 
 .true {
-  background-color: darkgreen;
-  font-style: italic;
+  background-color: rgb(75, 167, 75);
+  font-weight: bold;
+  color: #fff;
 }
 
 span[contenteditable = 'true']{
