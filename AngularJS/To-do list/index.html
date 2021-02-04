@@ -10,14 +10,23 @@
 </head>
 <body ng-app="mainApp" ng-controller="app">
   <h1 class="titleTask">Add a task</h1>
-  <input ng-model="task" ng-keyup="searchEnter()" type="text" class="inputTask">
+  <input 
+  ng-model="task" 
+  ng-keyup="searchEnter()" 
+  type="text" 
+  class="inputTask">
 
   <div id="tasksToShow">
     <ul>
-      <li class="listTask" ng-repeat="task in tasks track by $index">
-        <input type="checkbox" ng-model="task.status">
-        <span ng-keydown="contentEdit()" contenteditable="false" ng-dblclick="contentEdit()" ng-model="task.task" class="{{task.status}}">
-          {{task.task}}
+      <li class="listTask" ng-repeat="oneTask in tasks track by $index">
+        <input type="checkbox" ng-model="oneTask.status">
+        <span 
+        ng-keydown="enterAgain(oneTask.taskMessage)" 
+        contenteditable="false" 
+        ng-dblclick="contentEdit(oneTask.taskMessage)" 
+        ng-model="oneTask.taskMessage" 
+        class="{{oneTask.status}}">
+          {{oneTask.taskMessage}}
         </span>
       </li>
     </ul>
