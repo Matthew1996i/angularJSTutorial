@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJs | isolated scope property</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="controller5.js"></script>
+</head>
+<body ng-app="mainApp" ng-controller="app">
+  <p>First variabel 'name': {{ name }}</p>
+  <p>Second variabel 'age': {{ age }}</p>
+  <input type="button" value="From controller" ng-click="alertTheName()">
+
+  <p>-------------Directives-------------</p>
+
+  <div my-first-script name="{{ name }}" age=age func="alertTheName()"></div>
+</body>
+</html>
