@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJs | isolated scope property</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+  <script src="controller5.js"></script>
+  <style>
+    .animate.ng-enter, .animate.ng-leave {
+      transition: 500ms linear all
+    }
+    .animate.ng-leave.ng-leave-active, .animate.ng-enter.ng-enter-active {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body ng-app="mainApp" ng-controller="app">
+  Search <input type="text" ng-model="searchBox">
+  <ul>
+    <li class="animate" ng-repeat="food in foods | filter: searchBox">
+      {{ food }}
+    </li>
+  </ul>
+</body>
+</html>
